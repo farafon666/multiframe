@@ -1,0 +1,60 @@
+body,
+html {
+  /* высота 100% */
+  height: 100%;
+  /* без отступов */
+  margin: 0;
+  /* цвет фона*/
+  background-color:darkgray;
+}
+
+.grid-container {
+  /* превращаем элемент в грид-контейнер */
+  display: grid;
+  /* разбиваем пространство страницы на 3 колонки равной ширины */ 
+ grid-template-columns: 1fr 1fr 1fr;
+  /* высота колонок 100% */
+  height: 100%;
+}
+
+iframe {
+  /* ширина фрейма */
+  width: 100%;
+  /* высота фрейма */
+  height: 100%;
+  border: 0.5px solid black;
+}
+
+.buttons {
+  /* превращаем элемент в грид-контейнер */
+  display: grid;
+  /* разбиваем пространство на 3 колонки */
+  grid-template-columns: 1fr 1fr 1fr;
+  /* отступы */
+  padding: 1em;
+  /* граница */
+  border: 0.5px solid black;
+  /* расстояние между элементами в сетке */
+  gap: 1em;
+}
+
+button {
+  /* вид курсора при наведении */  
+  cursor: pointer;
+  /* отступы по высоте и ширине */
+  padding: 10px 20px;
+  /* граница */
+  border: 0.5px solid black;
+  /*скруглённые углы кнопок */
+  border-radius: 30px;
+  /* цвет кнопок */
+  background-color: rgb(125, 19, 187);
+  /* цвет текста */
+  color: white;
+}
+
+/* стили кнопки очистки */
+.buttons__btn-clear {
+  /* цвет кнопки */
+  background-color: rgb(255, 0, 128);
+}

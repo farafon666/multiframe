@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>8 сайтов на одной странице</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+ <div class="grid-container">
+   <iframe src="about:blank" id="frame1"></iframe>
+   <iframe src="about:blank" id="frame2"></iframe>
+   <iframe src="about:blank" id="frame3"></iframe>
+   <iframe src="about:blank" id="frame4"></iframe>
+   <div class="buttons">
+     <button onclick="updateFrame(1)">Сайт 1</button>
+     <button onclick="updateFrame(2)">Сайт 2</button>
+     <button onclick="updateFrame(3)">Сайт 3</button>
+     <button onclick="updateFrame(4)">Сайт 4</button>
+     <button onclick="clearFrames()" class="buttons__btn-clear">Очистить</button>
+     <button onclick="updateFrame(5)">Сайт 5</button>
+     <button onclick="updateFrame(6)">Сайт 6</button>
+     <button onclick="updateFrame(7)">Сайт 7</button>
+     <button onclick="updateFrame(8)">Сайт 8</button>
+   </div>
+   <iframe src="about:blank" id="frame5"></iframe>
+   <iframe src="about:blank" id="frame6"></iframe>
+   <iframe src="about:blank" id="frame7"></iframe>
+   <iframe src="about:blank" id="frame8"></iframe>
+ </div>
+ <script>
+   function updateFrame(frameNumber) {
+     const url = prompt("Введите адрес сайта " + frameNumber);
+     if (url) {
+       document.getElementById('frame' + frameNumber).src = url;
+     }
+   }
+
+   function clearFrames() {
+     const frames = document.querySelectorAll("iframe");
+     frames.forEach(frame => {
+       frame.src = "";
+     });
+   }
+ </script>
+</body>
+</html>
